@@ -3,12 +3,13 @@ import { TopBar }                from "./components/dashboard/TopBar";
 import { Sidebar }               from "./components/dashboard/Sidebar";
 import { LiveFeed }              from "./components/dashboard/LiveFeed";
 import { PipeModel }             from "./components/dashboard/PipeModel";
+import { Mapping3D }             from "./components/dashboard/Mapping3D";
 import { MLAnalysis }            from "./components/dashboard/MLAnalysis";
 import { PredictiveMaintenance } from "./components/dashboard/PredictiveMaintenance";
 import { Telemetry }             from "./components/dashboard/Telemetry";
 import { Reports }               from "./components/dashboard/Reports";
 
-type Section = "feed" | "model" | "ml" | "maintenance" | "telemetry" | "reports";
+type Section = "feed" | "model" | "mapping" | "ml" | "maintenance" | "telemetry" | "reports";
 
 export default function App() {
   const [section, setSection] = useState<Section>("feed");
@@ -25,6 +26,7 @@ export default function App() {
           <div className="flex-1 overflow-hidden">
             {section === "feed"        && <LiveFeed />}
             {section === "model"       && <PipeModel />}
+            {section === "mapping"     && <Mapping3D />}
             {section === "ml"          && <MLAnalysis />}
             {section === "maintenance" && <PredictiveMaintenance />}
             {section === "telemetry"   && <Telemetry />}

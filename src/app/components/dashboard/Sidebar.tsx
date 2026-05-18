@@ -1,9 +1,10 @@
-import { Video, Box, Brain, Wrench, Activity, FileText } from "lucide-react";
+import { Video, Box, Brain, Wrench, Activity, FileText, Layers } from "lucide-react";
 import { PIPE_SPEC } from "./mockData";
 
 const NAV = [
   { id: "feed",        label: "Live Feed",    icon: Video,     dot: "bg-red-400 animate-pulse" },
   { id: "model",       label: "Pipe Model",   icon: Box,       dot: "" },
+  { id: "mapping",     label: "3D Mapping",   icon: Layers,    dot: "" },
   { id: "ml",          label: "ML Analysis",  icon: Brain,     dot: "" },
   { id: "maintenance", label: "Maintenance",  icon: Wrench,    dot: "" },
   { id: "telemetry",   label: "Telemetry",    icon: Activity,  dot: "" },
